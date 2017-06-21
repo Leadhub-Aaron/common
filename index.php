@@ -9,8 +9,6 @@
  * License: GPLv2 or later
  */
 
-add_action('plugins_loaded', function() {
-    if(!class_exists('Leadhub\\Common')) {
-        include __DIR__ . '/class_leadhub_common.php';
-    }
-});
+if(!class_exists('Leadhub\\Common')) {
+    include __DIR__ . '/class_leadhub_common.php';
+}
