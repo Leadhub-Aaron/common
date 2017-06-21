@@ -1,5 +1,5 @@
 {
-    "name": "leadhub/common",
+    "name": "leadhub/utils",
     "description": "Common functionality for LEADHUB theme and plugin developers.",
     "type": "wordpress-plugin",
     "license": "GPL",
