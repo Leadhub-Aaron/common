@@ -1,0 +1,13 @@
+{
+    "name": "leadhub/leadhub-common",
+    "description": "Common functionality for LEADHUB theme and plugin developers.",
+    "type": "wordpress-plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Richard",
+            "email": "richard@leadhub.net"
+        }
+    ],
+    "require": {}
+}
