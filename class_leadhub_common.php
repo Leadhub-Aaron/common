@@ -143,7 +143,3 @@ class Common {
         return preg_replace('|.*v=([A-Za-z0-9_-]+)$|', '$1', $url);
     }
 }
-
-if(!class_exists('Leadhub\\Landing_Pages')) {
-    include __DIR__ . '/class_landing_pages.php';
-}
