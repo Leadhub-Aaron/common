@@ -9,5 +9,11 @@
             "email": "richard@leadhub.net"
         }
     ],
-    "require": {}
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Leadhub\\": "src/"
+        }
+    }
 }

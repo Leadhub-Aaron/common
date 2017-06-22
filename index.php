@@ -10,5 +10,5 @@
  */
 
 if(!class_exists('Leadhub\\Common')) {
-    include __DIR__ . '/class_leadhub_common.php';
+    include __DIR__ . 'src/Common.php';
 }
