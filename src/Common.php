@@ -2,6 +2,8 @@
 
 namespace Leadhub;
 
+if(!class_exists('Common')):
+
 class Common {
     public static function pretty_fold_text($text, $divide, $ratio = .5) {
         $words = explode(" ", $text);
@@ -145,3 +147,5 @@ class Common {
         return preg_replace('|.*v=([A-Za-z0-9_-]+)$|', '$1', $url);
     }
 }
+
+endif;
