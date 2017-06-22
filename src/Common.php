@@ -134,7 +134,7 @@ class Common {
     }
 
     public static function get_youtube_embed_url($url, $autoplay = false) {
-        $link = 'https://youtube.com/embed/' . llp_get_youtube_id($url) . '?rel=0';
+        $link = 'https://youtube.com/embed/' . Common::get_youtube_id($url) . '?rel=0';
 
         if($autoplay) {
             $link .= '&autoplay=1';
