@@ -1,5 +1,7 @@
 <?php
 
+namespace Leadhub;
+
 class Common {
     public static function pretty_fold_text($text, $divide, $ratio = .5) {
         $words = explode(" ", $text);
