@@ -146,6 +146,53 @@ class Common {
     public static function get_youtube_id($url) {
         return preg_replace('|.*v=([A-Za-z0-9_-]+)$|', '$1', $url);
     }
+
+	public static function get_share_link($medium, $post = null) {
+		if($post == null) {
+			$post = get_the_ID();
+		}
+
+		$url = get_the_permalink($post);
+
+		switch($medium) {
+			case 'google-plus':
+				return "https://plus.google.com/share?url=" . urlencode($url);
+				break;
+
+			case "twitter":
+				$content = "Check this out." . "\n" . $url;
+				return "https://twitter.com/home?status=" . urlencode($content);
+				break;
+
+			case "facebook":
+				return "https://facebook.com/sharer/sharer.php?u=" . urlencode($url);
+				break;
+
+			case "linkedin":
+				$params = array(
+					'mini' => true,
+					'url'  => $url,
+					'title' => get_the_title($post),
+					'summary' => get_the_excerpt($post),
+					'source' => ''
+				);
+
+				return "https://www.linkedin.com/shareArticle?" . http_build_query($params);
+				break;
+
+			case "pinterest":
+				$params = array(
+					'url' => get_the_post_thumbnail_url($post),
+					'media' => get_the_title($post),
+					'description' => get_the_excerpt($post) . "\n" . "Read more here: " . "\n" . $url
+				);
+
+				return "https://pinterest.com/pin/create/button/?" . http_build_query($params);
+
+			default:
+				return null;
+		}
+	}
 }
 
 endif;
