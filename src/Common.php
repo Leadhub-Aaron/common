@@ -189,6 +189,14 @@ class Common {
 
 				return "https://pinterest.com/pin/create/button/?" . http_build_query($params);
 
+			case "email":
+				$params = array(
+					'subject' => get_the_title(),
+					'body' => get_the_permalink(),
+				);
+
+				return "mailto:?" . http_build_query($params);
+
 			default:
 				return null;
 		}
