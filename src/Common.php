@@ -5,6 +5,8 @@ namespace Leadhub;
 if(!class_exists('Common')):
 
 class Common {
+    public static $menu_page = "theme-menu-page.php";
+
     public static function pretty_fold_text($text, $divide, $ratio = .5) {
         $words = explode(" ", $text);
 
@@ -97,8 +99,6 @@ class Common {
     public static function register_post_type($name, $plural, $args=array(), $prefix = "") {
         $uppercase = ucwords($name);
         $plural_uppercase = ucwords($plural);
-
-        $menu_page = LLP_MENU_PAGE;
 
         $labels = array(
             'name' => $plural_uppercase,
